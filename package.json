@@ -1,0 +1,23 @@
+{
+  "name": "es6-design-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunshinefull/es6-design-patterns.git"
+  },
+  "keywords": [
+    "javascript",
+    "es6-design-patterns"
+  ],
+  "author": "sunshinefull",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunshinefull/es6-design-patterns/issues"
+  },
+  "homepage": "https://github.com/sunshinefull/es6-design-patterns#readme"
+}

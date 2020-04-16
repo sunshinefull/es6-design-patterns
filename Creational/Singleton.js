@@ -1,7 +1,7 @@
 class Singleton{
     constructor(data){
         if(Singleton.exists){
-            return Singleton.instance
+                return Singleton.instance
         }
         this._data=data
         Singleton.exists=true

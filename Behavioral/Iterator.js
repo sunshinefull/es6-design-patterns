@@ -27,7 +27,4 @@ function* iteratorUsingGenerator(collection) {
   }
 }
 
-module.exports = {
-  IteratorClass,
-  iteratorUsingGenerator
-};
+export { IteratorClass, iteratorUsingGenerator };

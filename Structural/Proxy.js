@@ -18,6 +18,4 @@ const proxiedNetworkFetch = new Proxy(networkFetch, {
   }
 });
 
-module.exports = {
-  proxiedNetworkFetch
-};
+export { proxiedNetworkFetch };

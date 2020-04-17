@@ -26,9 +26,4 @@ class PersonalCar extends Vehicle {
     this._timeTaken = 3;
   }
 }
-module.exports = {
-  Commute,
-  Bus,
-  Taxi,
-  PersonalCar
-};
+export { Commute, Bus, Taxi, PersonalCar };

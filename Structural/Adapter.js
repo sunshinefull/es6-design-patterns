@@ -47,8 +47,4 @@ console.log(adaptedCalc.operations(10, 5, 'add')); // 20;
 console.log(adaptedCalc.operations(10, 5, 'sub')); // 0
 */
 
-module.exports = {
-  OldCalculator,
-  NewCalculator,
-  CalcAdapter
-};
+export { OldCalculator, NewCalculator, CalcAdapter };

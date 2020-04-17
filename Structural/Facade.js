@@ -68,11 +68,7 @@ class ServiceComplaints extends Complaints {
   }
 }
 
-module.exports = {
-  ComplaintRegistry,
-  ProductComplaints,
-  ServiceComplaints
-};
+export { ComplaintRegistry, ProductComplaints, ServiceComplaints };
 
 // usage
 /*

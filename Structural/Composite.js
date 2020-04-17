@@ -118,8 +118,4 @@ root
 ------right-end
 ----right-right
 */
-module.exports = {
-  Component,
-  Leaf,
-  Composite
-};
+export { Component, Leaf, Composite };

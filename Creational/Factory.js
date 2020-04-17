@@ -48,6 +48,4 @@ console.log(myFootball.kick()); // You kicked the football.
 console.log(myBasketball.bounce()); // You bounced the basketball.
 */
 
-module.exports = {
-  BallFactory
-};
+export default BallFactory;

@@ -31,7 +31,4 @@ class Observer {
     }
   }
 }
-module.exports = {
-  Subject,
-  Observer
-};
+export { Subject, Observer };

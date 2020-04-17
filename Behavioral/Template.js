@@ -26,7 +26,4 @@ class Tester extends Employee {
     return "testing";
   }
 }
-module.exports = {
-  Tester,
-  Developer
-};
+export { Tester, Developer };

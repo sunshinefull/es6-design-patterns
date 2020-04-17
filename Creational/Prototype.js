@@ -11,4 +11,4 @@ const car = {
 // Object.create(proto[, propertiesObject])
 //Object.setPrototypeOf(object,proto)
 //class xxx extends xxx
-module.export = car;
+export default car;

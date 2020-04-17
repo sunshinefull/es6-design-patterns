@@ -9,4 +9,4 @@ class CumulativeSum {
   }
 }
 
-module.exports = CumulativeSum;
+export default CumulativeSum;

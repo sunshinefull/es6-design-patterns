@@ -26,8 +26,4 @@ class Command {
     return this._subject[command]();
   }
 }
-
-module.exports = {
-  Command,
-  SpecialMath
-};
+export { Command, SpecialMath };

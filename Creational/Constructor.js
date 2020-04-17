@@ -7,4 +7,4 @@ class Hero {
     return `${this._name} can ${this._specialAbility}`;
   }
 }
-module.exports = Hero;
+export default Hero;

@@ -15,4 +15,4 @@ class Singleton {
     return (this._data = data);
   }
 }
-module.export = Singleton;
+export default Singleton;

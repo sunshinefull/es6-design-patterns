@@ -28,8 +28,4 @@ function hardbindBook(book) {
   return book;
 }
 
-module.exports = {
-  Book,
-  giftWrap,
-  hardbindBook
-};
+export { Book, giftWrap, hardbindBook };

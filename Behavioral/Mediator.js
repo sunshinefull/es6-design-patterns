@@ -76,7 +76,4 @@ class Airplane {
 // bob.makeOrder('efg','hij')
 // console.log(mediator.getCustomerList())
 
-module.exports = {
-  TrafficTower,
-  Airplane
-};
+export { TrafficTower, Airplane };

@@ -43,4 +43,4 @@ class RedLight extends Light {
     return "stop";
   }
 }
-module.exports = TrafficLight;
+export default TrafficLight;

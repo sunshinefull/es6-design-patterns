@@ -1,30 +1,53 @@
-class BallFactory{
-    constructor(){
-        this.createBall=function(type){
-            let ball;
-            if(type==='football'||type==='soccer') ball=new Football();
-            else if(type==='basketball') ball = new Basketball();
-            ball.roll=function(){
-                return `the ${this._type} is rolling.`
-            }
-            return ball
-        }
-    }
+/*
+    Factory Pattern is another class-based creational pattern. In this, we provide a generic interface that delegate the responsibility of object instantiation to its subclasses.
+    This pattern is frequently used when we need to manage or manipulate collections of objects that are different yet have many similiar characteristics.
+*/
+
+// ES6 Class syntax
+class BallFactory {
+  constructor() {
+    this.createBall = function(type) {
+      let ball;
+      if (type === "football" || type === "soccer") ball = new Football();
+      else if (type === "basketball") ball = new Basketball();
+      ball.roll = function() {
+        return `The ${this._type} is rolling.`;
+      };
+
+      return ball;
+    };
+  }
 }
-class Football{
-    constructor(){
-        this._type='flltball';
-        this.kick=function(){
-            return 'you kicked the football'
-        }
-    }
+
+class Football {
+  constructor() {
+    this._type = "football";
+    this.kick = function() {
+      return "You kicked the football.";
+    };
+  }
 }
-class BallFactory{
-    constructor(){
-        this._type='basketball';
-        this.bounce=function(){
-            return `you bounced the basketball`
-        }
-    }
+
+class Basketball {
+  constructor() {
+    this._type = "basketball";
+    this.bounce = function() {
+      return "You bounced the basketball.";
+    };
+  }
 }
-module.exports=BallFactory
+
+// creating objects
+/*
+const factory = new BallFactory();
+const myFootball = factory.createBall('football');
+const myBasketball = factory.createBall('basketball');
+console.log(myFootball.roll()); // The football is rolling.
+console.log(myBasketball.roll()); // The basketball is rolling.
+console.log(myFootball.kick()); // You kicked the football.
+console.log(myBasketball.bounce()); // You bounced the basketball.
+*/
+
+module.exports = {
+  BallFactory
+};

@@ -1,91 +1,96 @@
 class Component {
-	constructor(name) {
-		this._name = name;
-	}
+  constructor(name) {
+    this._name = name;
+  }
 
-	getNodeName() {
-		return this._name;
-	}
+  getNodeName() {
+    return this._name;
+  }
 
-	// abstract methods that need to be overridden
-	getType() {}
+  // abstract methods that need to be overridden
+  getType() {}
 
-	addChild(component) {}
+  addChild(component) {}
 
-	removeChildByName(compoentName) {}
+  removeChildByName(compoentName) {}
 
-	removeChildByIndex(index) {}
+  removeChildByIndex(index) {}
 
-	getChildByName(componentName) {}
+  getChildByName(componentName) {}
 
-	getChildByIndex(index) {}
+  getChildByIndex(index) {}
 
-	noOfChildren() {}
+  noOfChildren() {}
 
-	static logTreeStructure(root) {
-		let treeStructure = '';
-		function traverse(node, indent = 0) {
-			treeStructure += `${'--'.repeat(indent)}${node.getNodeName()}\n`;
-			indent++;
-			for (let i = 0, length = node.noOfChildren(); i < length; i++) {
-				traverse(node.getChildByIndex(i), indent);
-			}
-		}
+  static logTreeStructure(root) {
+    let treeStructure = "";
+    function traverse(node, indent = 0) {
+      treeStructure += `${"--".repeat(indent)}${node.getNodeName()}\n`;
+      indent++;
+      for (let i = 0, length = node.noOfChildren(); i < length; i++) {
+        traverse(node.getChildByIndex(i), indent);
+      }
+    }
 
-		traverse(root);
-		return treeStructure;
-	}
+    traverse(root);
+    return treeStructure;
+  }
 }
 
 class Leaf extends Component {
-	constructor(name) {
-		super(name);
-		this._type = 'Leaf Node';
-	}
+  constructor(name) {
+    super(name);
+    this._type = "Leaf Node";
+  }
 
-	getType() {
-		return this._type;
-	}
+  getType() {
+    return this._type;
+  }
 
-	noOfChildren() {
-		return 0;
-	}
+  noOfChildren() {
+    return 0;
+  }
 }
 
 class Composite extends Component {
-	constructor(name) {
-		super(name);
-		this._type = 'Composite Node';
-		this._children = [];
-	}
+  constructor(name) {
+    super(name);
+    this._type = "Composite Node";
+    this._children = [];
+  }
 
-	getType() {
-		return this._type;
-	}
+  getType() {
+    return this._type;
+  }
 
-	addChild(component) {
-		this._children = [...this._children, component];
-	}
+  addChild(component) {
+    this._children = [...this._children, component];
+  }
 
-	removeChildByName(componentName) {
-		this._children = [...this._children].filter(component => component.getNodeName() !== componentName);
-	}
+  removeChildByName(componentName) {
+    this._children = [...this._children].filter(
+      component => component.getNodeName() !== componentName
+    );
+  }
 
-	removeChildByIndex(index) {
-		this._children = [...this._children.slice(0, index), ...this._children.slice(index + 1)];
-	}
+  removeChildByIndex(index) {
+    this._children = [
+      ...this._children.slice(0, index),
+      ...this._children.slice(index + 1)
+    ];
+  }
 
-	getChildByName(componentName) {
-		return this._children.find(component => component.name === componentName);
-	}
+  getChildByName(componentName) {
+    return this._children.find(component => component.name === componentName);
+  }
 
-	getChildByIndex(index) {
-		return this._children[index];
-	}
+  getChildByIndex(index) {
+    return this._children[index];
+  }
 
-	noOfChildren() {
-		return this._children.length;
-	}
+  noOfChildren() {
+    return this._children.length;
+  }
 }
 // usage
 /*
@@ -114,7 +119,7 @@ root
 ----right-right
 */
 module.exports = {
-	Component,
-	Leaf,
-	Composite,
+  Component,
+  Leaf,
+  Composite
 };

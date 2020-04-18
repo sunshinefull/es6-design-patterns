@@ -10,8 +10,8 @@ class TrafficTower {
 
   requestCoordinates(airplane) {
     return this._airplanes
-      .filter(plane => airplane !== plane)
-      .map(plane => plane.coordinates);
+      .filter((plane) => airplane !== plane)
+      .map((plane) => plane.coordinates);
   }
 }
 

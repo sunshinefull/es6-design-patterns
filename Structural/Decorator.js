@@ -13,7 +13,7 @@ class Book {
 // decorator 1
 function giftWrap(book) {
   book.isGiftWrapped = true; //添加新的属性
-  book.unwrap = function() {
+  book.unwrap = function () {
     return `Unwrapped ${book.getDetails()}`;
   };
   delete book._author; //删除实例属性

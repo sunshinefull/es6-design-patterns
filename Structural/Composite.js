@@ -69,19 +69,19 @@ class Composite extends Component {
 
   removeChildByName(componentName) {
     this._children = [...this._children].filter(
-      component => component.getNodeName() !== componentName
+      (component) => component.getNodeName() !== componentName
     );
   }
 
   removeChildByIndex(index) {
     this._children = [
       ...this._children.slice(0, index),
-      ...this._children.slice(index + 1)
+      ...this._children.slice(index + 1),
     ];
   }
 
   getChildByName(componentName) {
-    return this._children.find(component => component.name === componentName);
+    return this._children.find((component) => component.name === componentName);
   }
 
   getChildByIndex(index) {

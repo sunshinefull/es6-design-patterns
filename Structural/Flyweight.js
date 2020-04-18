@@ -24,7 +24,7 @@ class IcecreamFactory {
   }
 
   getIcecream(flavour) {
-    return this._icecreams.find(icecream => icecream.flavour === flavour);
+    return this._icecreams.find((icecream) => icecream.flavour === flavour);
   }
 }
 export { IcecreamFactory };

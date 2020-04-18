@@ -13,7 +13,7 @@ class IteratorClass {
           this.index = 0; // to reset iteration status
           return { done: true };
         }
-      }
+      },
     };
   }
 }

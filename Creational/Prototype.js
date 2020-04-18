@@ -5,7 +5,7 @@ const car = {
   },
   stop() {
     return "stopped";
-  }
+  },
 };
 
 // Object.create(proto[, propertiesObject])

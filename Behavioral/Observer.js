@@ -6,10 +6,10 @@ class Subject {
     this._observers.push(observer);
   }
   unSubscribe(observer) {
-    this._observers = this._observers.filter(obs => obs != observer);
+    this._observers = this._observers.filter((obs) => obs != observer);
   }
   fire(change) {
-    this._observers.forEach(observer => {
+    this._observers.forEach((observer) => {
       observer.update(change);
     });
   }

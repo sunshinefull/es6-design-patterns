@@ -1,6 +1,6 @@
 class OldCalculator {
   constructor() {
-    this.operations = function(term1, term2, operation) {
+    this.operations = function (term1, term2, operation) {
       switch (operation) {
         case "add":
           return term1 + term2;
@@ -14,10 +14,10 @@ class OldCalculator {
 }
 class NewCalculator {
   constructor() {
-    this.add = function(term1, term2) {
+    this.add = function (term1, term2) {
       return term1 + term2 + 5;
     };
-    this.sub = function(term1, term2) {
+    this.sub = function (term1, term2) {
       return term1 - term2 - 5;
     };
   }
@@ -25,7 +25,7 @@ class NewCalculator {
 class CalcAdapter {
   constructor() {
     const newCalc = new NewCalculator();
-    this.operations = function(term1, term2, operation) {
+    this.operations = function (term1, term2, operation) {
       switch (operation) {
         case "add":
           return newCalc.add(term1, term2);

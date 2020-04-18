@@ -28,7 +28,7 @@ class Complaints {
   }
 
   getComplaint(id) {
-    return this.complaints.find(complaint => complaint.id === id);
+    return this.complaints.find((complaint) => complaint.id === id);
   }
 
   replyMessage(complaint) {}
